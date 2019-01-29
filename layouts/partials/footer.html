@@ -53,6 +53,11 @@
       console.log('[ServiceWorker] Registered');
     });
   }
+  var originURI = {{ .Permalink }}
+  originURI = decodeURIComponent(originURI)
+  var originData = document.querySelector("#origin-url")
+  originData.setAttribute("href", originURI)
+  originData.innerHTML = originURI
 </script>
 
 <!-- Google Analytics -->
